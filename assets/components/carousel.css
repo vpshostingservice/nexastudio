@@ -1,0 +1,46 @@
+.carousel { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #fff; }
+.carousel .carousel-img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.4s ease; aspect-ratio: unset; }
+.carousel .carousel-img.active { opacity: 1; }
+.carousel .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.45); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; line-height: 1; }
+.carousel .carousel-btn:hover { background: rgba(0,0,0,0.7); }
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+.carousel .carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+.carousel .carousel-dot { width: 7px; height: 7px; background: rgba(0,0,0,0.25); border-radius: 50%; cursor: pointer; transition: background 0.2s; }
+.carousel .carousel-dot.active { background: rgba(0,0,0,0.7); }
+
+.carousel-c { position: relative; overflow: hidden; background: #fff; }
+.carousel-c .carousel-img { display: none; width: 100%; aspect-ratio: 4/3; object-fit: contain; padding: 1.5rem; background: #fff; filter: none; }
+.carousel-c .carousel-img.active { display: block; }
+.carousel-c .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.35); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.carousel-c .carousel-btn.prev { left: 10px; }
+.carousel-c .carousel-btn.next { right: 10px; }
+.carousel-c .carousel-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+.carousel-c .carousel-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(0,0,0,0.25); cursor: pointer; border: none; }
+.carousel-c .carousel-dot.active { background: #4d93f0; }
+.carousel-image-contained { object-fit: contain; background: #fff; padding: 1.5rem; }
+.carousel-image-unfiltered { filter: none; }
+
+@media (max-width: 580px) {
+	.carousel .carousel-btn,
+	.carousel-c .carousel-btn {
+		width: 30px;
+		height: 30px;
+		font-size: 0.95rem;
+	}
+
+	.carousel-prev,
+	.carousel-c .carousel-btn.prev {
+		left: 6px;
+	}
+
+	.carousel-next,
+	.carousel-c .carousel-btn.next {
+		right: 6px;
+	}
+
+	.carousel-c .carousel-img,
+	.carousel-image-contained {
+		padding: 0.95rem;
+	}
+}

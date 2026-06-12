@@ -1,0 +1,3 @@
+.page-hero { padding-top: 6rem; }
+.locks-section { padding-bottom: 7rem; }
+.locks-note { background: var(--dark-3); border: 1px solid var(--gray-1); border-left: 3px solid var(--accent); border-radius: 10px; }
